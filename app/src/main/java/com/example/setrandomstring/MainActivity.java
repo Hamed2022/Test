@@ -16,25 +16,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         SampleText = findViewById(R.id.sample_text_tv);
         ChangeButton = findViewById(R.id.change_text_button);
 
-        ArrayList<String> Names = new ArrayList<String>();
+        ArrayList<String> Names = new ArrayList<>();
         Names.add("Ali");
         Names.add("Reza");
         Names.add("Javad");
         Names.add("Hasan");
         Names.add("Mohsen");
 
-        ChangeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int randomIndex = new Random().nextInt(Names.size());
-                String randomString = Names.get(randomIndex);
-                SampleText.setText(randomString);
-            }
+        ChangeButton.setOnClickListener(v -> {
+            int randomIndex = new Random().nextInt(Names.size());
+            String randomString = Names.get(randomIndex);
+            SampleText.setText(randomString);
         });
 
 

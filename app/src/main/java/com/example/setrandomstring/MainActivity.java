@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Names.add("Gholi");
         Names.add("rrr");
         Names.add("dfdf");
+        Names.add("dfdf");
 
         ChangeButton.setOnClickListener(v -> {
             int randomIndex = new Random().nextInt(Names.size());
